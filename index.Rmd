@@ -153,3 +153,9 @@ editor_options:
 ---
 
 ![map](images/time.png)
+
+---
+
+`r emo::ji("whale")`
+
+https://iobis.github.io/presentation-atlanteco-kickoff
