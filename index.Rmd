@@ -1,0 +1,155 @@
+---
+title: AtlantECO Kick-Off Meeting
+subtitle: The Ocean Biodiversity Information System (OBIS)
+author: | 
+  | Pieter Provoost
+  | Intergovernmental Oceanographic Commission (IOC) of UNESCO 
+  | p.provoost@unesco.org
+output:
+  revealjs::revealjs_presentation:
+    fig_width: 6
+    fig_height: 4
+    center: true
+    self_contained: false
+    reveal_plugins: ["notes"]
+    css:
+    - css/style.css
+    theme: simple
+    highlight: tango
+    transition: none
+    background_transition: none
+    slide_level: 1
+    reveal_options:
+      slideNumber: false
+      controls: false
+editor_options: 
+  chunk_output_type: console
+---
+
+## The OBIS data pipeline
+
+![schema](images/schema.png)
+
+---
+
+## Data standards and formats
+
+- Darwin Core Archives: EML metadata + Darwin Core tabular data files
+- support for event based datasets
+- support for generic measurements or facts linked to vocabularies (type, value and unit)
+
+![schema](images/envdata.png){ width=70% }
+
+--- 
+
+## Quality control
+
+- quality control at the provider and node level using community contributed tools and services (LifeWatch, EMODnet)
+- internal quality control: https://github.com/iobis/obis-qc
+- will be aligned with work of the TDWG Data Quality Interest Group
+- no specific quality control for metagenomic data yet
+
+![schema](images/metacrap.png){ width=50% }
+
+--- 
+
+## OBIS API
+
+- documentation at https://api.obis.org
+- features
+  - occurrence data
+    - including measurements and facts
+    - including quality flags
+    - filter on time, location, depth, taxonomy, and many more
+  - dataset metadata
+  - gridded occurrence layers (GeoJSON, vector tiles)
+  - checklists
+  - statistics
+
+--- 
+
+## R package
+
+- provides a more friendly way to interact with the OBIS API
+- available from https://github.com/iobis/robis as well as CRAN
+
+---
+
+![map](images/swedish_benthos.png)
+
+---
+
+![map](images/dutch_benthos.png)
+
+---
+
+## Mapper
+
+![mapper](images/mapper.png)
+
+--- 
+
+## Gridded data products?
+
+- not at the moment, but a GeoNode installation is coming soon
+- R notebooks published to GitHub
+
+---
+
+## Data workflow
+
+![map](images/data.png)
+
+---
+
+![map](images/schema_2.png)
+
+---
+
+## Current data holdings
+
+![map](images/traits.png){ width=70% }
+
+---
+
+- 7,916,538 records
+- 972 datasets
+- 7,051 taxa
+
+![map](images/map.png)
+
+---
+
+- 3,719,808 records
+- 483 datasets
+- 4,287 taxa
+
+![map](images/map_atlantic.png)
+
+---
+
+- 0 - 10 m depth: 83%
+- 10 - 200 m depth: 13%
+- shelf: 55%
+
+![map](images/depth.png){ width=75% }
+
+---
+
+| records | dataset |
+| --- | --- |
+| 1,517,869 | The CPR Survey |
+| 333,504 | Network Monitoring phytoplankton (REPHY) |
+| 253,783 | World Ocean Database 2009 |
+| 222,973 | Dutch long term monitoring of phytoplankton in the Dutch Continental Economical Zone of the North Sea |
+| 114,109 | ICES Historical Plankton Dataset |
+| 109,287 | Atlantic Zone Monitoring Program (AZMP) DFO Quebec region phytoplankton |
+| 74,084 | SHARK - Marine phytoplankton monitoring in Sweden since 1983 |
+| 69,689 | Biogeographic data from BODC - British Oceanographic Data Centre |
+| 67,021 | BioChem: Atlantic Zone Monitoring Program (AZMP) Quebec Region zooplankton collection |
+| 62,230 | Marine and Coastal Management - Copepod Surveys (South Africa) |
+| 47,207 | Continuous Plankton Recorder Dataset (NOAA) - Zooplankton |
+
+---
+
+![map](images/time.png)
